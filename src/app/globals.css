@@ -1,60 +1,68 @@
 @import "tailwindcss";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Indian Restaurant App Design System
+   Modern food delivery aesthetic with warm saffron, vibrant reds, and clean whites
+   All colors in HSL format for consistency
 */
 
 :root {
-  /* Premium golf club color palette */
-  /* Off-white background with charcoal text */
-  --background: 40 20% 97%;
-  --foreground: 0 0% 15%;
+  /* Main backgrounds - Clean white with warm undertones */
+  --background: 30 20% 98%;
+  --foreground: 0 0% 10%;
 
-  /* Clean white cards with charcoal text */
+  /* Card backgrounds - Pure white for food photography */
   --card: 0 0% 100%;
-  --card-foreground: 0 0% 15%;
+  --card-foreground: 0 0% 10%;
 
-  /* Popovers with white background */
+  /* Popovers and dropdowns */
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 15%;
+  --popover-foreground: 0 0% 10%;
 
-  /* Primary: Deep forest green with white text */
-  --primary: 155 30% 25%;
+  /* Primary: Warm saffron orange for main CTAs */
+  --primary: 25 95% 53%;
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Gold/champagne accent */
-  --secondary: 45 65% 60%;
-  --secondary-foreground: 0 0% 15%;
+  /* Secondary: Deep red for Indian aesthetic */
+  --secondary: 0 72% 51%;
+  --secondary-foreground: 0 0% 100%;
 
-  /* Muted: Light green-gray with darker text */
-  --muted: 155 15% 92%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Light gray for subtle backgrounds */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 45%;
 
-  /* Accent: Gold for highlights */
-  --accent: 45 75% 55%;
-  --accent-foreground: 0 0% 15%;
+  /* Accent: Vibrant saffron for highlights and badges */
+  --accent: 35 91% 55%;
+  --accent-foreground: 0 0% 10%;
 
-  /* Destructive: Elegant red */
-  --destructive: 0 65% 48%;
+  /* Destructive: Error red */
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Soft neutral */
-  --border: 0 0% 88%;
-  --input: 0 0% 88%;
-  --ring: 155 30% 25%;
+  /* Success: Fresh green for available/delivered status */
+  --success: 142 71% 45%;
+  --success-foreground: 0 0% 100%;
 
-  /* Slightly more rounded for elegance */
-  --radius: 0.5rem;
+  /* Warning: Amber for in-progress states */
+  --warning: 45 93% 47%;
+  --warning-foreground: 0 0% 10%;
 
-  /* Sidebar: Clean white with black text */
+  /* Borders and inputs - Soft neutral */
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --ring: 25 95% 53%;
+
+  /* Border radius - Modern rounded corners */
+  --radius: 0.75rem;
+
+  /* Sidebar/Navigation */
   --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  --sidebar-foreground: 0 0% 10%;
+  --sidebar-primary: 25 95% 53%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
+  --sidebar-accent: 30 20% 98%;
+  --sidebar-accent-foreground: 0 0% 10%;
   --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-ring: 25 95% 53%;
 }
 
 .dark {
@@ -178,19 +186,55 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Premium golf club typography */
+/* Restaurant App Typography - Clean, modern, and highly readable */
 .font-sans {
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
 .font-serif {
-  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+/* Typography Scale - Optimized for food content */
+h1 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+}
+
+h2 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: hsl(var(--foreground));
+}
+
+h3 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.5rem;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: hsl(var(--foreground));
+}
+
+h4 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: hsl(var(--foreground));
+}
+
+h5, h6 {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
   color: hsl(var(--foreground));
 }
 
@@ -282,11 +326,95 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Premium gradient backgrounds */
-.gradient-gold {
-  background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--secondary)) 100%);
+/* Restaurant app gradient backgrounds */
+.gradient-saffron {
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
 }
 
-.gradient-green {
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(155 35% 30%) 100%);
+.gradient-spicy {
+  background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(0 85% 45%) 100%);
+}
+
+/* Food card styling */
+.food-card {
+  background: hsl(var(--card));
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Rating stars */
+.star-rating {
+  color: hsl(var(--accent));
+}
+
+/* Status badges */
+.badge-success {
+  background: hsl(var(--success) / 0.1);
+  color: hsl(var(--success));
+  padding: 0.25rem 0.75rem;
+  border-radius: calc(var(--radius) * 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-warning {
+  background: hsl(var(--warning) / 0.1);
+  color: hsl(var(--warning));
+  padding: 0.25rem 0.75rem;
+  border-radius: calc(var(--radius) * 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-primary {
+  background: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  padding: 0.25rem 0.75rem;
+  border-radius: calc(var(--radius) * 0.5);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Bottom navigation bar for mobile */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsl(var(--card));
+  border-top: 1px solid hsl(var(--border));
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+  box-shadow: 0 -2px 8px rgb(0 0 0 / 0.05);
+}
+
+/* Smooth image loading */
+.restaurant-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.restaurant-image:hover {
+  transform: scale(1.05);
+}
+
+/* Hide scrollbar for horizontal scrolling elements */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

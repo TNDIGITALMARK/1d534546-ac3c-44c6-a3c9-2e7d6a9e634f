@@ -22,8 +22,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sterling Oaks Golf Club | Championship Golf Experience",
-  description: "Experience championship golf on three award-winning courses designed by Robert Trent Jones II. Premium memberships, events, and world-class amenities.",
+  title: "FoodExpress India | Order Food Online from Restaurants Near You",
+  description: "Discover and order from thousands of restaurants across India. Fast delivery, amazing deals, and authentic local cuisines. Order now from Mumbai, Delhi, Bangalore, and more!",
 };
 
 export default function RootLayout({
